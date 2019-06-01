@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewControllerTransition_CircularAnimation_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr2-dS-68A">
+                                <rect key="frame" x="177" y="104.5" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.37403541800000001" blue="0.244799395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="DMp-Y2-NYQ"/>
+                                    <constraint firstAttribute="width" constant="60" id="Yzy-j9-7N8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="O">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gqB-C1-RJh" kind="show" id="fwX-kv-PIX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yr2-dS-68A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="KRo-Yr-MiX"/>
+                            <constraint firstItem="Yr2-dS-68A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zmj-PZ-GpX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="openButton" destination="Yr2-dS-68A" id="rOl-x5-rv5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="116"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="4eo-uA-bYG">
+            <objects>
+                <viewController id="gqB-C1-RJh" customClass="NextViewController" customModule="ViewControllerTransition_CircularAnimation_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q9q-Gq-e3e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-3R-mCz">
+                                <rect key="frame" x="177" y="104.5" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.97463665359999996" green="1" blue="0.98240056860000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="40X-b9-djc"/>
+                                    <constraint firstAttribute="height" constant="60" id="6vP-oh-4if"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="1" green="0.37403541800000001" blue="0.244799395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnClose:" destination="gqB-C1-RJh" eventType="touchUpInside" id="XWU-M8-7eJ"/>
+                                    <action selector="openButton:" destination="7lv-sH-0aa" eventType="touchUpInside" id="c5j-fN-up5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.37403541800000001" blue="0.244799395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hGu-3R-mCz" firstAttribute="centerX" secondItem="Q9q-Gq-e3e" secondAttribute="centerX" id="iUv-nc-2RK"/>
+                            <constraint firstItem="hGu-3R-mCz" firstAttribute="centerY" secondItem="Q9q-Gq-e3e" secondAttribute="centerY" multiplier="0.3" id="yY6-Lc-d9p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mln-vZ-wxY"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="hGu-3R-mCz" id="lnc-rO-xcI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Gt-rh-Qea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7lv-sH-0aa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="116"/>
+        </scene>
+    </scenes>
+</document>
