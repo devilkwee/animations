@@ -46,7 +46,7 @@ extension CircularTransition: UIViewControllerAnimatedTransitioning {
                 circle.layer.cornerRadius = circle.frame.size.height / 2
                 circle.center = startingPoint
                 circle.backgroundColor = circleColor
-                circle.transform = CGAffineTransform(scaleX: 0.001, y: 0.001 )
+                circle.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
                 
                 containerView.addSubview(circle)
                 
