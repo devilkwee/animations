@@ -48,18 +48,15 @@ class customTransition: UIPresentationController {
         return presentedViewFrame
     }
     
-    // レイアウト開始前に呼ばれる
     override func containerViewWillLayoutSubviews() {
         overlayView.frame = containerView!.bounds
         presentedView?.frame = frameOfPresentedViewInContainerView
         presentedView?.clipsToBounds = true
     }
     
-    // レイアウト開始後に呼ばれる
     override func containerViewDidLayoutSubviews() {
     }
     
-    // overlayViewをタップした時に呼ばれる
     @objc func overlayViewDidTouch(_ sender: UITapGestureRecognizer) {
         presentedViewController.dismiss(animated: true, completion: nil)
     }
