@@ -15,7 +15,6 @@ class customTransition: UIPresentationController {
         overlayView.alpha = 0.0
         containerView.insertSubview(overlayView, at: 0)
         
-        // トランジションを実行
         presentedViewController.transitionCoordinator?.animate(alongsideTransition: {[weak self] context in
             self?.overlayView.alpha = 0.3
             }, completion:nil)
