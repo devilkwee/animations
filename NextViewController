@@ -1,0 +1,35 @@
+import UIKit
+
+class NextViewController: UIViewController{
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.modalPresentationStyle = .custom
+        self.transitioningDelegate = self
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    @IBAction func didTapOnClose(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension NextViewController: UIViewControllerTransitioningDelegate {
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomTransition(presentedViewController: presented, presenting: presenting)
+    }
+
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CustomTransition.Animation()
+    }
+
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CustomTransition.Animation()
+    }
+}
